@@ -178,7 +178,7 @@ const LeftNav = React.createClass({
           ref="overlay"
           show={this.state.open || !!this.state.swiping}
           transitionEnabled={!this.state.swiping}
-          onTouchTap={this._onOverlayTouchTap} />
+          onClick={this._onOverlayTouchTap} />
       );
     }
     let children;

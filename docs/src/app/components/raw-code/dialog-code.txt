@@ -1,7 +1,7 @@
 //Standard Actions
 let standardActions = [
   { text: 'Cancel' },
-  { text: 'Submit', onTouchTap: this._onDialogSubmit, ref: 'submit' }
+  { text: 'Submit', onClick: this._onDialogSubmit, ref: 'submit' }
 ];
 
 <Dialog
@@ -18,11 +18,11 @@ let customActions = [
   <FlatButton
     label="Cancel"
     secondary={true}
-    onTouchTap={this._handleCustomDialogCancel} />,
+    onClick={this._handleCustomDialogCancel} />,
   <FlatButton
     label="Submit"
     primary={true}
-    onTouchTap={this._handleCustomDialogSubmit} />
+    onClick={this._handleCustomDialogSubmit} />
 ];
 
 <Dialog

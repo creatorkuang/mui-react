@@ -232,7 +232,7 @@ const DropDownMenu = React.createClass({
           this.state.open && styles.rootWhenOpen,
           style)} >
 
-          <ClearFix style={this.mergeStyles(styles.control)} onTouchTap={this._onControlClick}>
+          <ClearFix style={this.mergeStyles(styles.control)} onClick={this._onControlClick}>
             <Paper style={this.mergeStyles(styles.controlBg)} zDepth={0} />
             <div style={this.prepareStyles(styles.label, this.state.open && styles.labelWhenOpen, labelStyle)}>
               {displayValue}
@@ -252,7 +252,7 @@ const DropDownMenu = React.createClass({
             visible={this.state.open}
             onRequestClose={this._onMenuRequestClose}
             onItemTap={this._onMenuItemClick} />
-          {this.state.open && <div style={this.prepareStyles(styles.overlay)} onTouchTap={this._handleOverlayTouchTap} />}
+          {this.state.open && <div style={this.prepareStyles(styles.overlay)} onClick={this._handleOverlayTouchTap} />}
       </div>
     );
   },

@@ -42,7 +42,7 @@ const DatePicker = React.createClass({
     onChange: React.PropTypes.func,
     onFocus: React.PropTypes.func,
     onShow: React.PropTypes.func,
-    onTouchTap: React.PropTypes.func,
+    onClick: React.PropTypes.func,
     shouldDisableDate: React.PropTypes.func,
     showYearSelector: React.PropTypes.bool,
     style: React.PropTypes.object,
@@ -95,7 +95,7 @@ const DatePicker = React.createClass({
       onDismiss,
       onFocus,
       onShow,
-      onTouchTap,
+      onClick,
       showYearSelector,
       style,
       textFieldStyle,
@@ -111,7 +111,7 @@ const DatePicker = React.createClass({
           ref="input"
           value={this.state.date ? formatDate(this.state.date) : undefined}
           onFocus={this._handleInputFocus}
-          onTouchTap={this._handleInputTouchTap}/>
+          onClick={this._handleInputTouchTap}/>
         <DatePickerDialog
           ref="dialogWindow"
           DateTimeFormat={DateTimeFormat}
@@ -180,7 +180,7 @@ const DatePicker = React.createClass({
   },
 
   _handleInputTouchTap: function _handleInputTouchTap(event) {
-    if (this.props.onTouchTap) this.props.onTouchTap(event);
+    if (this.props.onClick) this.props.onClick(event);
 
     setTimeout(() => {
       this.openDialog();

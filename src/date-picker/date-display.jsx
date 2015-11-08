@@ -145,7 +145,7 @@ const DateDisplay = React.createClass({
         <SlideInTransitionGroup
           style={styles.year.root}
           direction={this.state.transitionDirection}>
-          <div key={year} style={styles.year.title} onTouchTap={this._handleYearClick}>{year}</div>
+          <div key={year} style={styles.year.title} onClick={this._handleYearClick}>{year}</div>
         </SlideInTransitionGroup>
 
         <SlideInTransitionGroup
@@ -154,7 +154,7 @@ const DateDisplay = React.createClass({
             <div
               key={dateTimeFormatted}
               style={styles.monthDay.title}
-              onTouchTap={this._handleMonthDayClick}>
+              onClick={this._handleMonthDayClick}>
                 {dateTimeFormatted}
             </div>
         </SlideInTransitionGroup>

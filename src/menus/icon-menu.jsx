@@ -28,7 +28,7 @@ const IconMenu = React.createClass({
     onMouseLeave: React.PropTypes.func,
     onMouseEnter: React.PropTypes.func,
     onMouseUp: React.PropTypes.func,
-    onTouchTap: React.PropTypes.func,
+    onClick: React.PropTypes.func,
     menuStyle: React.PropTypes.object,
     touchTapCloseDelay: React.PropTypes.number,
   },
@@ -43,7 +43,7 @@ const IconMenu = React.createClass({
       onMouseLeave: () => {},
       onMouseEnter: () => {},
       onMouseUp: () => {},
-      onTouchTap: () => {},
+      onClick: () => {},
       touchTapCloseDelay: 200,
     };
   },
@@ -96,7 +96,7 @@ const IconMenu = React.createClass({
       onMouseLeave,
       onMouseEnter,
       onMouseUp,
-      onTouchTap,
+      onClick,
       menuStyle,
       style,
       ...other,
@@ -126,9 +126,9 @@ const IconMenu = React.createClass({
     let iconButton = React.cloneElement(iconButtonElement, {
       onKeyboardFocus: this.props.onKeyboardFocus,
       iconStyle: this.mergeStyles(iconStyle, iconButtonElement.props.iconStyle),
-      onTouchTap: (e) => {
+      onClick: (e) => {
         this.open(Events.isKeyboard(e));
-        if (iconButtonElement.props.onTouchTap) iconButtonElement.props.onTouchTap(e);
+        if (iconButtonElement.props.onClick) iconButtonElement.props.onClick(e);
       },
       ref: this.state.iconButtonRef,
     });
@@ -153,7 +153,7 @@ const IconMenu = React.createClass({
         onMouseLeave={onMouseLeave}
         onMouseEnter={onMouseEnter}
         onMouseUp={onMouseUp}
-        onTouchTap={onTouchTap}
+        onClick={onClick}
         style={mergedRootStyles}>
         {iconButton}
         <ReactTransitionGroup>{menu}</ReactTransitionGroup>

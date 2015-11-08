@@ -187,7 +187,7 @@ const AppBar = React.createClass({
             style={this.mergeStyles(styles.iconButton.style)}
             iconStyle={this.mergeStyles(styles.iconButton.iconStyle)}
             iconClassName={iconClassNameLeft}
-            onTouchTap={this._onLeftIconButtonTouchTap}>
+            onClick={this._onLeftIconButtonTouchTap}>
               {child}
           </IconButton>
         );
@@ -221,7 +221,7 @@ const AppBar = React.createClass({
           style={iconRightStyle}
           iconStyle={this.mergeStyles(styles.iconButton.iconStyle)}
           iconClassName={iconClassNameRight}
-          onTouchTap={this._onRightIconButtonTouchTap}>
+          onClick={this._onRightIconButtonTouchTap}>
         </IconButton>
       );
     }

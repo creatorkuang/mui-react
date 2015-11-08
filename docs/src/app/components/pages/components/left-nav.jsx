@@ -144,9 +144,9 @@ export default class LeftNavPage extends React.Component {
         <CodeExample code={Code}>
           <div>
             <div>
-              <RaisedButton label="Toggle Docked Left Nav" onTouchTap={this._toggleDockedLeftNavClick} /><br/><br/>
-              <RaisedButton label="Show Hideable Left Nav" onTouchTap={this._showLeftNavClick} /><br/><br/>
-              <RaisedButton label="Show Hideable Children Left Nav" onTouchTap={this._showLeftNavChildrenClick} /><br/><br/>
+              <RaisedButton label="Toggle Docked Left Nav" onClick={this._toggleDockedLeftNavClick} /><br/><br/>
+              <RaisedButton label="Show Hideable Left Nav" onClick={this._showLeftNavClick} /><br/><br/>
+              <RaisedButton label="Show Hideable Children Left Nav" onClick={this._showLeftNavChildrenClick} /><br/><br/>
             </div>
 
             <LeftNav ref="dockedLeftNav" docked={this.state.isDocked} menuItems={menuItems} />

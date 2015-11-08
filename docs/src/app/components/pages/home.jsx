@@ -106,7 +106,7 @@ const HomePage = React.createClass({
             <RaisedButton
               className="demo-button"
               label="Demo"
-              onTouchTap={this._onDemoClick}
+              onClick={this._onDemoClick}
               linkButton={true}
               style={styles.demoStyle}
               labelStyle={styles.label}/>

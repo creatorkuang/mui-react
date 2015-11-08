@@ -32,7 +32,7 @@ const MenuItem = React.createClass({
     data: React.PropTypes.string,
     toggle: React.PropTypes.bool,
     disabled: React.PropTypes.bool,
-    onTouchTap: React.PropTypes.func,
+    onClick: React.PropTypes.func,
     onToggle: React.PropTypes.func,
     selected: React.PropTypes.bool,
     active: React.PropTypes.bool,
@@ -167,7 +167,7 @@ const MenuItem = React.createClass({
     if (this.props.toggle) {
       let {
         toggle,
-        onTouchTap,
+        onClick,
         onToggle,
         onMouseEnter,
         onMouseLeave,
@@ -183,7 +183,7 @@ const MenuItem = React.createClass({
       <div
         key={this.props.index}
         className={this.props.className}
-        onTouchTap={this._handleTouchTap}
+        onClick={this._handleTouchTap}
         onMouseEnter={this._handleMouseEnter}
         onMouseLeave={this._handleMouseLeave}
         style={this.prepareStyles(
@@ -206,7 +206,7 @@ const MenuItem = React.createClass({
   },
 
   _handleTouchTap(e) {
-    if (!this.props.disabled && this.props.onTouchTap) this.props.onTouchTap(e, this.props.index);
+    if (!this.props.disabled && this.props.onClick) this.props.onClick(e, this.props.index);
   },
 
   _handleToggle(e, toggled) {

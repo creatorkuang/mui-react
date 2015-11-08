@@ -1,8 +1,8 @@
 {
-  "name": "material-ui",
-  "author": "Call-em-all Engineering Team",
-  "version": "0.13.1",
-  "description": "Material Design UI components built with React",
+  "name": "mui-react",
+  "author": "creatorkuang",
+  "version": "0.0.1",
+  "description": "fork from Material Design UI components built with React",
   "main": "./lib",
   "scripts": {
     "test": "npm run test-base -- --single-run",

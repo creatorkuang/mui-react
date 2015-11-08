@@ -132,7 +132,7 @@ export default class DialogPage extends React.Component {
 
     let standardActions = [
       { text: 'Cancel' },
-      { text: 'Submit', onTouchTap: this._onDialogSubmit, ref: 'submit' },
+      { text: 'Submit', onClick: this._onDialogSubmit, ref: 'submit' },
     ];
 
     let customActions = [
@@ -140,24 +140,24 @@ export default class DialogPage extends React.Component {
         key={1}
         label="Cancel"
         secondary={true}
-        onTouchTap={this._handleCustomDialogCancel} />,
+        onClick={this._handleCustomDialogCancel} />,
       <FlatButton
         key={2}
         label="Submit"
         primary={true}
-        onTouchTap={this._handleCustomDialogSubmit} />,
+        onClick={this._handleCustomDialogSubmit} />,
     ];
     let scrollableCustomActions = [
       <FlatButton
         key={1}
         label="Cancel"
         secondary={true}
-        onTouchTap={this._handleScrollableDialogCancel} />,
+        onClick={this._handleScrollableDialogCancel} />,
       <FlatButton
         key={2}
         label="Submit"
         primary={true}
-        onTouchTap={this._handleScrollableDialogSubmit} />,
+        onClick={this._handleScrollableDialogSubmit} />,
     ];
 
     return (
@@ -165,11 +165,11 @@ export default class DialogPage extends React.Component {
         name="Dialog"
         componentInfo={componentInfo}>
         <CodeExample code={Code}>
-          <RaisedButton label="Standard Actions" onTouchTap={this._handleStandardDialogTouchTap} />
+          <RaisedButton label="Standard Actions" onClick={this._handleStandardDialogTouchTap} />
           <br/><br/>
-          <RaisedButton label="Custom Actions" onTouchTap={this._handleCustomDialogTouchTap} />
+          <RaisedButton label="Custom Actions" onClick={this._handleCustomDialogTouchTap} />
           <br/><br/>
-          <RaisedButton label="Scrollable Content And Custom Actions" onTouchTap={this._handleScrollableDialogTouchTap} />
+          <RaisedButton label="Scrollable Content And Custom Actions" onClick={this._handleScrollableDialogTouchTap} />
 
           <Dialog
             ref="standardDialog"

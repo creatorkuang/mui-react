@@ -134,7 +134,7 @@ const DatePickerDialog = React.createClass({
         label={wordings.cancel}
         secondary={true}
         style={styles.actions}
-        onTouchTap={this._handleCancelTouchTap} />,
+        onClick={this._handleCancelTouchTap} />,
     ];
 
     if (!this.props.autoOk) {
@@ -145,7 +145,7 @@ const DatePickerDialog = React.createClass({
           secondary={true}
           disabled={this.refs.calendar !== undefined && this.refs.calendar.isSelectedDateDisabled()}
           style={styles.actions}
-          onTouchTap={this._handleOKTouchTap} />
+          onClick={this._handleOKTouchTap} />
       );
     }
 

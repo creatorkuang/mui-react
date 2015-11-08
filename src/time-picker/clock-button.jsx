@@ -51,7 +51,7 @@ const ClockButton = React.createClass({
     this.setState({
       selected: true,
     });
-    this.props.onTouchTap();
+    this.props.onClick();
   },
 
   getTheme() {
@@ -111,7 +111,7 @@ const ClockButton = React.createClass({
           style={this.mergeStyles(styles.root)}
           disableFocusRipple={true}
           disableTouchRipple={true}
-          onTouchTap={this._handleTouchTap}>
+          onClick={this._handleTouchTap}>
           <span style={this.prepareStyles(styles.select)} />
           <span style={this.prepareStyles(styles.label)} >{this.props.children}</span>
         </EnhancedButton>

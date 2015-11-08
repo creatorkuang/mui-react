@@ -286,9 +286,9 @@ const Menu = React.createClass({
     return React.cloneElement(child, {
       desktop: desktop,
       focusState: focusState,
-      onTouchTap: (e) => {
+      onClick: (e) => {
         this._handleMenuItemTouchTap(e, child);
-        if (child.props.onTouchTap) child.props.onTouchTap(e);
+        if (child.props.onClick) child.props.onClick(e);
       },
       ref: isFocused ? 'focusedMenuItem' : null,
       style: mergedChildrenStyles,

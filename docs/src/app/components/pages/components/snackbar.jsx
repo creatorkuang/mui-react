@@ -100,14 +100,14 @@ export default class SnackbarPage extends React.Component {
         componentInfo={componentInfo}>
         <CodeExample code={Code}>
           <RaisedButton
-            onTouchTap={this._handleClick}
+            onClick={this._handleClick}
             label="Add to my calendar" />
 
           <br />
           <br />
 
           <RaisedButton
-            onTouchTap={this._handleClickDouble}
+            onClick={this._handleClickDouble}
             label="Add to my calendar two times" />
 
           <br />

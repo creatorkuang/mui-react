@@ -234,7 +234,7 @@ const Snackbar = React.createClass({
         <FlatButton
           style={styles.action}
           label={action}
-          onTouchTap={onActionTouchTap} />
+          onClick={onActionTouchTap} />
       );
     }
 

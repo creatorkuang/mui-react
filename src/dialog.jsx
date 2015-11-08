@@ -111,7 +111,7 @@ let Dialog = React.createClass({
     contentClassName: React.PropTypes.string,
     contentStyle: React.PropTypes.object,
     openImmediately: React.PropTypes.bool,
-    onClickAway: React.PropTypes.func,
+    onTouchTabAway: React.PropTypes.func,
     repositionOnUpdate: React.PropTypes.bool,
     title: React.PropTypes.node,
     defaultIsOpen: React.PropTypes.bool,
@@ -272,7 +272,7 @@ let Dialog = React.createClass({
           ref="dialogOverlay"
           show={this.state.open}
           autoLockScrolling={false}
-          onTouchTap={this._handleOverlayTouchTap} />
+          onClick={this._handleOverlayTouchTap} />
       </div>
     );
   },
@@ -303,11 +303,11 @@ let Dialog = React.createClass({
       key: key,
       secondary: true,
       onClick: actionJSON.onClick,
-      onTouchTap: () => {
-        if (actionJSON.onTouchTap) {
-          actionJSON.onTouchTap.call(undefined);
+      onTouchTab: () => {
+        if (actionJSON.onTouchTab) {
+          actionJSON.onTouchTab.call(undefined);
         }
-        if (!(actionJSON.onClick || actionJSON.onTouchTap)) {
+        if (!(actionJSON.onClick || actionJSON.onTouchTab)) {
           this._requestClose(true);
         }
       },
@@ -432,16 +432,16 @@ let Dialog = React.createClass({
     this.setState({ open: false }, this._onDismiss);
   },
 
-  _requestClose(buttonClicked) {
+  _requestClose(buttonTouchTabed) {
     if (process.env.NODE_ENV !== 'production')
       warning(!this.props.hasOwnProperty('modal'),
         'modal will be removed in favor of explicitly setting isOpen and onRequestClose');
 
-    if (!buttonClicked && this.props.modal) return;
+    if (!buttonTouchTabed && this.props.modal) return;
 
     // Close the dialog if the isOpen state is not explicitly set.
     if (this.props.isOpen === null) this._dismiss();
-    if (this.props.onRequestClose) this.props.onRequestClose(!!buttonClicked);
+    if (this.props.onRequestClose) this.props.onRequestClose(!!buttonTouchTabed);
   },
 
   _handleOverlayTouchTap(e) {
