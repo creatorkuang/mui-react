@@ -1,0 +1,13 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "docs/package.json",
+        "examples/browserify-gulp-example/package.json",
+        "examples/webpack-example/package.json",
+        "icon-builder/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
