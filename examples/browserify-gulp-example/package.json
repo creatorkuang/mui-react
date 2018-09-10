@@ -10,26 +10,26 @@
     "start": "gulp"
   },
   "devDependencies": {
-    "babelify": "^6.1.2",
-    "browser-sync": "^1.8.1",
-    "browserify": "^7.0.3",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.24.7",
+    "browserify": "^16.2.2",
     "gulp": "^3.8.10",
-    "gulp-notify": "^2.1.0",
+    "gulp-notify": "^3.2.0",
     "gulp-util": "^3.0.1",
-    "pretty-hrtime": "^0.2.2",
-    "require-dir": "^0.1.0",
+    "pretty-hrtime": "^1.0.3",
+    "require-dir": "^1.0.0",
     "underscore": "^1.7.0",
-    "vinyl-source-stream": "^1.0.0",
-    "watchify": "^2.2.1"
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.0"
   },
   "dependencies": {
-    "material-ui": "^0.13.0",
-    "react": "^0.14.0",
-    "react-dom":"^0.14.0",
-    "react-tap-event-plugin": "^0.2.1",
-    "react-addons-create-fragment": "^0.14.0",
-    "react-addons-pure-render-mixin": "^0.14.0",
-    "react-addons-transition-group": "^0.14.0",
-    "react-addons-update": "^0.14.0"
+    "material-ui": "^0.20.2",
+    "react": "^16.5.0",
+    "react-dom":"^16.5.0",
+    "react-tap-event-plugin": "^3.0.3",
+    "react-addons-create-fragment": "^15.6.2",
+    "react-addons-pure-render-mixin": "^15.6.2",
+    "react-addons-transition-group": "^15.6.2",
+    "react-addons-update": "^15.6.2"
   }
 }
